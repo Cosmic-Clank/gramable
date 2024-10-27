@@ -27,7 +27,7 @@ const testimonials = [
 	},
 	{
 		name: "Sophia Lewis",
-		content: "Exceptional quality and incredible attention to detail. I’m beyond satisfied.",
+		content: "Exceptional quality and incredible attention to detail. I'm beyond satisfied.",
 	},
 	{
 		name: "Chris Johnson",
@@ -51,7 +51,7 @@ const Testimonials = () => {
 			<div className='w-1/2'>
 				{testimonials.map((testimonial, index) => (
 					<div key={index} className='flex flex-col items-center justify-center space-y-8 py-16'>
-						<p className='text-2xl font-medium text-gray-200 leading-relaxed'>"{testimonial.content}"</p>
+						<p className='text-2xl font-medium text-gray-200 leading-relaxed'>&quot;{testimonial.content}&quot;</p>
 						<span className='block text-lg text-gray-400 mb-44'>- {testimonial.name}</span>
 						{index < testimonials.length - 1 && <hr className='w-full border-gray-600' />} {/* Added my-8 for space around the hr */}
 					</div>
