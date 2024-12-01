@@ -5,17 +5,36 @@ import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Numbers from "@/components/Numbers";
 import Values from "@/components/Values";
+import CarouselPage from "@/components/CarouselPage";
+import Quote from "@/components/Quote";
+import ClientPics from "@/components/clientPics";
+import Services from "@/components/Services";
+import ContactUs from "@/components/ContactUs";
+import Stats from "@/components/Stats";
+import Team from "@/components/Team";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 
 export default function Home() {
 	return (
 		<main>
 			<Navbar />
 			<Hero />
-			<About />
+			<CarouselPage />
+			<Quote text='we build brands.' />
+			<ClientPics />
+			<Quote text='Lets get in touch?' />
+			<Services />
+			<ContactUs />
+			<Stats />
+			<Team />
 			<Testimonials />
-			<CTA />
+			<Features />
 			<Numbers />
-			<Values />
+			<Footer />
+			{/* <About /> */}
+			{/* <CTA /> */}
+			{/* <Values /> */}
 		</main>
 	);
 }

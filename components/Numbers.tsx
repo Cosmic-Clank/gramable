@@ -15,10 +15,10 @@ const Numbers = () => {
 	return (
 		<section className='w-full px-8 py-16 bg-white'>
 			<div className='max-w-7xl mx-auto'>
-				<div className='flex flex-col md:flex-row justify-between items-start mb-12'>
+				{/* <div className='flex flex-col md:flex-row justify-between items-start mb-12'>
 					<h3 className='text-lg font-semibold mb-4 md:mb-0'>About →</h3>
 					<p className='md:w-1/2 text-gray-700'>Facts and figures confirm our expertise and contribution to the success of our partners. We always encourage to set clear, measurable goals and analyze data to achieve quantifiable results and make informed decisions.</p>
-				</div>
+				</div> */}
 
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 					{stats.map((stat, index) => (
