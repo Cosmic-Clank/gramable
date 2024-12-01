@@ -4,15 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { IoMenu, IoClose } from "react-icons/io5";
 
-const navigation = [
-	{ name: "Home", href: "#", current: false },
-	{ name: "About", href: "#", current: false },
-	{ name: "Services", href: "#", current: false },
-	{ name: "Projects", href: "#", current: false },
-	{ name: "Testimonials", href: "#", current: false },
-	{ name: "Contact", href: "#", current: false },
-];
-
 export default function Example() {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
