@@ -1,11 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Button from "./ui/ButtonCustom";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { cn } from "@/lib/utils";
 
 const navigation = [
 	{ name: "Home", href: "#", current: false },

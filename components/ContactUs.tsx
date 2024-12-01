@@ -1,6 +1,5 @@
 import React from "react";
 import { BsInstagram } from "react-icons/bs";
-import { CiLocationArrow1 } from "react-icons/ci";
 import { FaLocationArrow } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
 
