@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Intro from "@/components/Intro";
 import Testimonials from "@/components/Testimonials";
-import Numbers from "@/components/Numbers";
 import Hero from "@/components/Hero";
 import Quote from "@/components/Quote";
 import ClientPics from "@/components/clientPics";
