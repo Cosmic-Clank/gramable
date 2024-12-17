@@ -1,8 +1,8 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import Intro from "@/components/Intro";
 import Testimonials from "@/components/Testimonials";
 import Numbers from "@/components/Numbers";
-import CarouselPage from "@/components/CarouselPage";
+import Hero from "@/components/Hero";
 import Quote from "@/components/Quote";
 import ClientPics from "@/components/clientPics";
 import Services from "@/components/Services";
@@ -14,20 +14,20 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
 	return (
-		<main>
+		<main className='relative'>
+			<Intro />
 			<Navbar />
 			<Hero />
-			<CarouselPage />
 			<Quote text='we build brands.' />
 			<ClientPics />
 			<Quote text='Lets get in touch?' />
 			<Services />
-			<ContactUs />
 			<Stats />
+			<ContactUs />
 			<Team />
 			<Testimonials />
 			<Features />
-			<Numbers />
+			{/* <Numbers /> */}
 			<Footer />
 			{/* <About /> */}
 			{/* <CTA /> */}

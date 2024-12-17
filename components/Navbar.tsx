@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export default function Example() {
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
+
+	const tl = useRef<gsap.core.Timeline | null>(null);
 
 	const toggleNavbar = () => {
 		setIsExpanded((prev) => !prev);
@@ -16,10 +20,20 @@ export default function Example() {
 		setIsScrolled(window.scrollY > 50);
 	};
 
+	useGSAP(() => {
+		gsap.set(".menu-item", { y: 75 });
+		tl.current = gsap.timeline({ paused: true }).to(".menu-item", { y: 0, ease: "none", stagger: 0.1 });
+	});
+
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
+		if (isExpanded) {
+			tl.current?.play();
+		} else {
+			tl.current?.reverse();
+		}
 		return () => window.removeEventListener("scroll", handleScroll);
-	});
+	}, [isExpanded]);
 
 	return (
 		<header className={`fixed top-0 z-50 w-full flex justify-center items-center px-12 transition-all duration-200 ${isScrolled ? "py-4 bg-transparent" : "py-8 bg-transparent"}`}>
@@ -58,31 +72,31 @@ export default function Example() {
 				</button>
 
 				<div className={`fixed flex flex-col justify-evenly top-0 right-full px-10 lg:px-20 transition-transform ease-in-out duration-500 transform bg-white h-screen w-screen text-teal overflow-hidden ${isExpanded ? "translate-x-full" : ""}`}>
-					<div className='tracking-widest text-lg lg:text-xl underline uppercase font-thin'>
+					{/* <div className='tracking-widest text-lg lg:text-xl underline uppercase font-thin'>
 						<p>
 							Experienced Technical Services
 							<br />
 							company of Uae
 						</p>
-					</div>
+					</div> */}
 					<ul className='flex flex-col gap-8 text-4xl lg:text-6xl font-bold'>
-						<li>
-							<Link href='#home' onClick={() => setIsExpanded(false)} className='transition-transform duration-100 transform hover:translate-x-10 inline-block'>
+						<li className='overflow-hidden'>
+							<Link href='#home' onClick={() => setIsExpanded(false)} className='menu-item duration-100 transform hover:underline transition-all inline-block'>
 								HOME
 							</Link>
 						</li>
-						<li>
-							<Link href='#about' onClick={() => setIsExpanded(false)} className='transition-transform duration-100 transform hover:translate-x-10 inline-block'>
+						<li className='overflow-hidden'>
+							<Link href='#about' onClick={() => setIsExpanded(false)} className='menu-item transition-transform duration-100 transform hover:underline inline-block'>
 								ABOUT
 							</Link>
 						</li>
-						<li>
-							<Link href='#services' onClick={() => setIsExpanded(false)} className='transition-transform duration-100 transform hover:translate-x-10 inline-block'>
+						<li className='overflow-hidden'>
+							<Link href='#services' onClick={() => setIsExpanded(false)} className='menu-item transition-transform duration-100 transform hover:underline inline-block'>
 								SERVICES
 							</Link>
 						</li>
-						<li>
-							<Link href='#contact' onClick={() => setIsExpanded(false)} className='transition-transform duration-100 transform hover:translate-x-10 inline-block'>
+						<li className='overflow-hidden'>
+							<Link href='#contact' onClick={() => setIsExpanded(false)} className='menu-item transition-transform duration-100 transform hover:underline inline-block'>
 								CONTACT
 							</Link>
 						</li>

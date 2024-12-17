@@ -1,6 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Team = () => {
+	const teamRef = useRef<(HTMLDivElement | null)[]>([]);
+
 	const teamMembers = [
 		{
 			name: "Ahmad",
@@ -24,11 +33,34 @@ const Team = () => {
 		},
 	];
 
+	useGSAP(() => {
+		gsap.fromTo(
+			teamRef.current,
+			{ opacity: 0, y: 50 },
+			{
+				opacity: 1,
+				y: 0,
+				duration: 1.2,
+				ease: "power2.out",
+				stagger: 0.3,
+				scrollTrigger: {
+					trigger: teamRef.current[0],
+					start: "top 80%",
+				},
+			}
+		);
+	});
+
 	return (
 		<section className='bg-yellow-400 py-28 px-6'>
 			<div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12'>
 				{teamMembers.map((member, index) => (
-					<div key={index} className='flex flex-col items-center text-center'>
+					<div
+						key={index}
+						ref={(el) => {
+							teamRef.current[index] = el;
+						}}
+						className='flex flex-col items-center text-center'>
 						{/* Image */}
 						<div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden'>
 							<img src={member.image} alt={member.name} className='w-full h-full object-cover' />

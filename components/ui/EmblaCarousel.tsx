@@ -2,6 +2,7 @@ import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { PrevButton, NextButton, usePrevNextButtons } from "./EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 type PropType = {
 	slides: string[];
@@ -10,7 +11,7 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
 	const { slides, options } = props;
-	const [emblaRef, emblaApi] = useEmblaCarousel(options);
+	const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ playOnInit: true, delay: 2500 })]);
 
 	const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 

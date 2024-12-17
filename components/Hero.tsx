@@ -1,14 +1,12 @@
 "use client";
-import { cn } from "@/lib/utils";
-import Lenis from "lenis";
-import { Poppins } from "next/font/google";
-import React, { useEffect } from "react";
 
-const poppins = Poppins({
-	subsets: ["latin"],
-	weight: "600",
-	display: "swap",
-});
+import React from "react";
+import EmblaCarousel from "./ui/EmblaCarousel";
+import Lenis from "lenis";
+import { useEffect } from "react";
+
+const OPTIONS = { loop: true, dragFree: false };
+const SLIDES = ["https://buiduyphuong.com/wp-content/uploads/2018/12/pexels-ekaterina-mitkina-10006575-840x525.jpg", "https://buiduyphuong.com/wp-content/uploads/2018/12/pexels-ekaterina-mitkina-10006575-840x525.jpg", "https://buiduyphuong.com/wp-content/uploads/2018/12/pexels-ekaterina-mitkina-10006575-840x525.jpg", "https://buiduyphuong.com/wp-content/uploads/2018/12/pexels-ekaterina-mitkina-10006575-840x525.jpg", "https://buiduyphuong.com/wp-content/uploads/2018/12/pexels-ekaterina-mitkina-10006575-840x525.jpg"];
 
 const Hero = () => {
 	useEffect(() => {
@@ -19,17 +17,7 @@ const Hero = () => {
 		}
 		requestAnimationFrame(raf);
 	}, []);
-	return (
-		<section className={cn("relative flex items-center justify-center h-screen bg-black overflow-hidden", poppins.className)}>
-			{/* Masked Text with Image Animation */}
-			<div className='relative z-10 text-white text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-bold overflow-hidden'>
-				{/* Mask Text */}
-				<span className='block mix-blend-overlay'>Gramable.</span>
-
-				{/* Animated Images Layer */}
-			</div>
-		</section>
-	);
+	return <EmblaCarousel slides={SLIDES} options={OPTIONS} />;
 };
 
 export default Hero;

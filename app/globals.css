@@ -20,7 +20,7 @@ body {
 
 .embla {
 	margin: auto;
-	--slide-height: 90vh;
+	--slide-height: 100vh;
 	--slide-spacing: 0;
 	--slide-size: 100%;
 	position: relative;

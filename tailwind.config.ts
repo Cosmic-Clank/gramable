@@ -39,6 +39,14 @@ const config: Config = {
 					"0%": { transform: "translate(0, 0) scale(1)" },
 					"100%": { transform: "translate(-600px, 400px) scale(2.5)" },
 				},
+				"swipe-left": {
+					"0%": { transform: "translateX(0)" },
+					"100%": { transform: "translateX(-100%)" },
+				},
+				"swipe-right": {
+					"0%": { transform: "translateX(0)" },
+					"100%": { transform: "translateX(100%)" },
+				},
 			},
 			animation: {
 				"move-left": "move-left 10s ease-in-out infinite",
@@ -47,6 +55,8 @@ const config: Config = {
 				"move-top-left": "move-top-left 10s ease-in-out infinite",
 				"move-bottom-right": "move-bottom-right 10s ease-in-out infinite",
 				"move-bottom-left": "move-bottom-left 10s ease-in-out infinite",
+				"swipe-left": "swipe-left 10s linear infinite",
+				"swipe-right": "swipe-right 10s linear infinite",
 			},
 		},
 	},
