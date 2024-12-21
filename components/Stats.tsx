@@ -19,8 +19,8 @@ const Stats = () => {
 		<section className='bg-white py-40 px-6'>
 			<div className='max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 				{stats.map((stat, index) => (
-					<TextFadeUp>
-						<div key={index} className='border-b border-gray-300 pb-6'>
+					<TextFadeUp key={index}>
+						<div className='border-b border-gray-300 pb-6'>
 							<TextFadeUp>
 								<h3 className='text-lg font-medium text-black'>{stat.title}</h3>
 							</TextFadeUp>

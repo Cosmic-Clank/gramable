@@ -49,8 +49,8 @@ const Testimonials = () => {
 			{/* Right Half: Scrolling Testimonials */}
 			<div className='w-full md:w-1/2'>
 				{testimonials.map((testimonial, index) => (
-					<TextFadeUp>
-						<div key={index} className='flex flex-col items-center justify-center space-y-8 py-8 md:py-16'>
+					<TextFadeUp key={index}>
+						<div className='flex flex-col items-center justify-center space-y-8 py-8 md:py-16'>
 							<p className='text-lg md:text-2xl font-medium text-gray-200 leading-relaxed text-center md:text-left'>&quot;{testimonial.content}&quot;</p>
 							<span className='block text-sm md:text-lg text-gray-400 mb-8'>- {testimonial.name}</span>
 							{index < testimonials.length - 1 && <hr className='w-full border-gray-600' />}
