@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
 import React from "react";
 
 gsap.registerPlugin(ScrollTrigger);
