@@ -1,6 +1,6 @@
 import React from "react";
 import TextFade from "./TextFadeUp";
-import TextFadeRight from "./TextFadeRIght";
+import TextFadeRight from "./TextFadeRight";
 import TextFadeLeft from "./TextFadeLeft";
 
 const Features = () => {

@@ -2,8 +2,8 @@ import React from "react";
 import { BsInstagram } from "react-icons/bs";
 import { FaLocationArrow } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
-import TextFadeRight from "./TextFadeRIght";
 import TextFadeLeft from "./TextFadeLeft";
+import TextFadeRight from "./TextFadeRight";
 
 const ContactUs = () => {
 	return (
