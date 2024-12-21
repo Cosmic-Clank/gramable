@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import CountNumbers from "./CountNumbers";
+import TextFadeUp from "./TextFadeUp";
 
 const Stats = () => {
 	const stats = [
@@ -18,10 +19,16 @@ const Stats = () => {
 		<section className='bg-white py-40 px-6'>
 			<div className='max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
 				{stats.map((stat, index) => (
-					<div key={index} className='border-b border-gray-300 pb-6'>
-						<h3 className='text-lg font-medium text-black'>{stat.title}</h3>
-						<CountNumbers start={0} end={parseFloat(stat.value.replace(/[^0-9.-]+/g, ""))} duration={3} className='text-3xl font-bold text-black mt-2' />
-					</div>
+					<TextFadeUp>
+						<div key={index} className='border-b border-gray-300 pb-6'>
+							<TextFadeUp>
+								<h3 className='text-lg font-medium text-black'>{stat.title}</h3>
+							</TextFadeUp>
+							<TextFadeUp>
+								<CountNumbers start={0} end={parseFloat(stat.value.replace(/[^0-9.-]+/g, ""))} duration={3} className='text-3xl font-bold text-black mt-2' />
+							</TextFadeUp>
+						</div>
+					</TextFadeUp>
 				))}
 			</div>
 		</section>

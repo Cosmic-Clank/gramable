@@ -1,5 +1,7 @@
 import React from "react";
-import TextFade from "./TextFade";
+import TextFade from "./TextFadeUp";
+import TextFadeRight from "./TextFadeRIght";
+import TextFadeLeft from "./TextFadeLeft";
 
 const Features = () => {
 	return (
@@ -12,21 +14,23 @@ const Features = () => {
 			</TextFade>
 
 			{/* Subsections */}
-			<TextFade>
-				<div className='max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-8'>
+			<div className='max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-8'>
+				<TextFadeRight>
 					{/* Feature 1 */}
 					<div>
 						<h3 className='text-xl font-bold text-gray-900'>No ego. Plenty of attitude.</h3>
 						<p className='text-gray-700 mt-4 leading-relaxed'>Pivot is fiercely independent. We reject big-agency bureaucracy, ego, and BS. Instead, we focus our energy on ideas and relationships that accomplish amazing things—together. Passion fuels our conviction and urgency. We believe deeply in what we do, and welcome everyone to join the ride.</p>
 					</div>
+				</TextFadeRight>
 
-					{/* Feature 2 */}
+				{/* Feature 2 */}
+				<TextFadeLeft>
 					<div>
 						<h3 className='text-xl font-bold text-gray-900'>A culture built on trust.</h3>
 						<p className='text-gray-700 mt-4 leading-relaxed'>Trust is the defining characteristic of the Pivot culture. The more we trust each other, the further we can push what’s possible in our work. Trust inspires us to honor each of our talents and give each other our best. Trust guides every aspect of what we do. As we hope you’re getting, trust is a really big deal.</p>
 					</div>
-				</div>
-			</TextFade>
+				</TextFadeLeft>
+			</div>
 		</section>
 	);
 };

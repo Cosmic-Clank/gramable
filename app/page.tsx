@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
 	return (
 		<main className='relative'>
-			<Intro />
+			{/* <Intro /> */}
 			<Navbar />
 			<Hero />
 			<Quote text='we build brands.' />

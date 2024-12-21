@@ -71,7 +71,7 @@ const Box: React.FC<{ service: Service }> = ({ service }) => {
 				ease: "expo.out",
 				scrollTrigger: {
 					trigger: boxRef.current,
-					start: "top 80%",
+					start: "top 90%",
 					toggleActions: "play none none none",
 				},
 				delay: service.id * 0.3,
@@ -79,7 +79,7 @@ const Box: React.FC<{ service: Service }> = ({ service }) => {
 		);
 	});
 	return (
-		<div ref={boxRef} className='box border-4 border-white hover:shadow-lg transition-shadow'>
+		<div ref={boxRef} className='box border-4 border-white shadow-2xl transition-shadow'>
 			<h3 className='text-3xl font-bold p-6 h-48 text-white border-white border-b-4'>{service.title}</h3>
 			<p className='text-white p-6'>{service.description}</p>
 		</div>

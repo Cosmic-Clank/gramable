@@ -19,12 +19,12 @@ const Intro = () => {
 	useGSAP(() => {
 		const tl = gsap.timeline();
 		const tl2 = gsap.timeline();
-		tl.fromTo(dotRef.current, { y: "-70vh", scale: 8, opacity: 1 }, { y: 0, scale: 8, opacity: 1, duration: 2, ease: "expo.inOut" });
+		tl.fromTo(dotRef.current, { y: "-70vh", scale: 8, opacity: 0.3 }, { y: 0, scale: 8, opacity: 1, duration: 2, ease: "expo.inOut" });
 		tl.to(dotRef.current, { x: -210, scale: 1, ease: "expo.out", delay: -0.4, duration: 0.5 });
 		tl2.from(textRef.current, { x: -250, scaleX: 0.01, opacity: 0, duration: 1, ease: "expo.out", delay: 2.4 });
 		tl.to(dotRef.current, { x: 210, scale: 0.6, ease: "expo.out", delay: 0.3, duration: 1 });
-		tl.to(dotRef.current, { x: 198, y: 16, scale: 0.5 });
-		tl.to(sectionRef.current, { left: "200%", opacity: 0.5, delay: 0.5, ease: "back.inOut", duration: 1 });
+		tl.to(dotRef.current, { x: 198, y: 16, scale: 0.5, duration: 0.5, ease: "expo.out" });
+		tl.to(sectionRef.current, { left: "200%", opacity: 0.5, delay: 0.5, ease: "back.inOut", duration: 0.8 });
 	});
 	return (
 		<section className={cn("flex items-center justify-center h-screen bg-black overflow-hidden z-50 absolute left-0 right-0", poppins.className)} ref={sectionRef}>

@@ -2,17 +2,18 @@ import React from "react";
 import { BsInstagram } from "react-icons/bs";
 import { FaLocationArrow } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
-import TextFade from "./TextFade";
+import TextFadeRight from "./TextFadeRIght";
+import TextFadeLeft from "./TextFadeLeft";
 
 const ContactUs = () => {
 	return (
 		<section className='bg-black text-white py-44 px-6'>
 			{/* Main Contact Information */}
 			<div className='max-w-4xl mx-auto'>
-				<TextFade>
+				<TextFadeRight>
 					<h1 className='text-3xl md:text-4xl font-bold mb-6'>CONTACT US</h1>
-				</TextFade>
-				<TextFade>
+				</TextFadeRight>
+				<TextFadeRight>
 					<div className='text-lg my-24'>
 						<p>Mobile Number: 123-456-7890</p>
 						<p>Address: 123 Anywhere St., Any City, ST 12345</p>
@@ -29,9 +30,9 @@ const ContactUs = () => {
 							</a>
 						</p>
 					</div>
-				</TextFade>
-				<TextFade>
-					<div className='bg-black text-white flex items-center justify-between py-4'>
+				</TextFadeRight>
+				<div className='bg-black text-white flex items-center justify-between py-4'>
+					<TextFadeRight>
 						{/* Icons Section */}
 						<div className='flex space-x-6'>
 							<a href='#' className='text-white hover:text-gray-400 text-2xl'>
@@ -44,13 +45,14 @@ const ContactUs = () => {
 								<BsInstagram />
 							</a>
 						</div>
-
+					</TextFadeRight>
+					<TextFadeLeft>
 						{/* Text Section */}
 						<div className='text-right'>
 							<p className='text-white font-medium'>we build brands.</p>
 						</div>
-					</div>
-				</TextFade>
+					</TextFadeLeft>
+				</div>
 			</div>
 
 			{/* Social Media Icons */}
