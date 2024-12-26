@@ -4,76 +4,79 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import TextWordStagger from "./TextWordStagger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Team = () => {
-	const teamRef = useRef<(HTMLDivElement | null)[]>([]);
+const teamMembers = [
+	{
+		name: "AHMAD",
+		role: "Design & Management",
+		arabic: "ا",
+	},
+	{
+		name: "HUZAIFAH",
+		role: "Marketing Strategies & Ad Campaigns",
+		arabic: "ح",
+	},
+	{
+		name: "ABDULLAH",
+		role: "Photography & Content Creation",
+		arabic: "ع",
+	},
+	{
+		name: "TAYYAB",
+		role: "Web Design & Development",
+		arabic: "ط",
+	},
+];
 
-	const teamMembers = [
-		{
-			name: "Ahmad",
-			role: "Design & Branding",
-			image: "https://via.placeholder.com/150", // Replace with actual image URL
-		},
-		{
-			name: "Abdullah",
-			role: "Content Creation",
-			image: "https://via.placeholder.com/150", // Replace with actual image URL
-		},
-		{
-			name: "Tayyab",
-			role: "Software Developer",
-			image: "https://via.placeholder.com/150", // Replace with actual image URL
-		},
-		{
-			name: "Huzaifa",
-			role: "Digital Marketing",
-			image: "https://via.placeholder.com/150", // Replace with actual image URL
-		},
-	];
+const TeamSection = () => {
+	const containerRef = useRef<HTMLDivElement>(null);
 
 	useGSAP(() => {
-		gsap.fromTo(
-			teamRef.current,
-			{ opacity: 0, y: 50 },
-			{
-				opacity: 1,
-				y: 0,
-				duration: 1.2,
-				ease: "power2.out",
-				stagger: 0.3,
-				scrollTrigger: {
-					trigger: teamRef.current[0],
-					start: "top 80%",
-				},
-			}
-		);
-	});
+		if (containerRef.current) {
+			const cards = containerRef.current.querySelectorAll(".team-card");
+
+			gsap.fromTo(
+				cards,
+				{ opacity: 0, y: 50 },
+				{
+					opacity: 1,
+					y: 0,
+					duration: 1,
+					ease: "power2.out",
+					stagger: 0.3,
+					scrollTrigger: {
+						trigger: containerRef.current,
+						start: "top 80%",
+						toggleActions: "play none none none",
+					},
+				}
+			);
+		}
+	}, []);
 
 	return (
-		<section className='bg-yellow-400 py-28 px-6'>
-			<div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12'>
-				{teamMembers.map((member, index) => (
-					<div
-						key={index}
-						ref={(el) => {
-							teamRef.current[index] = el;
-						}}
-						className='flex flex-col items-center text-center'>
-						{/* Image */}
-						<div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden'>
-							<img src={member.image} alt={member.name} className='w-full h-full object-cover' />
+		<section ref={containerRef} className='bg-[#b5a48a] py-20 px-6 flex justify-center items-center' id='team'>
+			<div className='max-w-7xl'>
+				<div className='mb-16'>
+					<TextWordStagger className='text-4xl font-bold text-white tracking-wide' text='THE TEAM' />
+					<TextWordStagger className='text-sm text-gray-300 mt-2' text='THE MINDS BEHIND THE QUALITY PRODUCTION' />
+				</div>
+
+				<div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10'>
+					{teamMembers.map((member, index) => (
+						<div key={index} className='team-card bg-black rounded-3xl text-center py-16 px-8 flex flex-col items-center shadow-lg'>
+							<span className='text-8xl text-white mb-6'>{member.arabic}</span>
+							<h3 className='text-white text-lg tracking-widest'>{member.name}</h3>
+							<p className='text-gray-400 text-sm mt-2'>{member.role}</p>
 						</div>
-						{/* Name */}
-						<h3 className='text-lg md:text-xl font-bold mt-4'>{member.name}.</h3>
-						{/* Role */}
-						<p className='text-sm md:text-base text-gray-800'>{member.role}</p>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
 		</section>
 	);
 };
 
-export default Team;
+export default TeamSection;

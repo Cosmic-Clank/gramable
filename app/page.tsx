@@ -1,36 +1,39 @@
-import Navbar from "@/components/Navbar";
 import Intro from "@/components/Intro";
 import Testimonials from "@/components/Testimonials";
-import Hero from "@/components/Hero";
-import Quote from "@/components/Quote";
 import ClientPics from "@/components/clientPics";
 import Services from "@/components/Services";
 import ContactUs from "@/components/ContactUs";
 import Stats from "@/components/Stats";
 import Team from "@/components/Team";
-import Features from "@/components/Features";
 import Footer from "@/components/Footer";
+import { cn } from "@/lib/utils";
+import { League_Spartan } from "next/font/google";
+import WeBuildBrands from "@/components/WeBuildBrands";
+import WantToMeet from "@/components/WantToMeet";
+import Gallery from "@/components/Gallery";
+import WhatsappWidget from "@/components/WhatsappWidget";
+
+const league_spartan = League_Spartan({
+	subsets: ["latin"],
+	weight: ["100", "300", "500", "600"],
+	display: "swap",
+});
 
 export default function Home() {
 	return (
-		<main className='relative'>
+		<main className={cn("relative", league_spartan.className)}>
 			<Intro />
-			<Navbar />
-			<Hero />
-			<Quote text='we build brands.' />
+			<WeBuildBrands />
 			<ClientPics />
-			<Quote text='Lets get in touch?' />
+			<WantToMeet />
 			<Services />
 			<Stats />
-			<ContactUs />
+			<Gallery />
 			<Team />
 			<Testimonials />
-			<Features />
-			{/* <Numbers /> */}
+			<ContactUs />
 			<Footer />
-			{/* <About /> */}
-			{/* <CTA /> */}
-			{/* <Values /> */}
+			<WhatsappWidget />
 		</main>
 	);
 }

@@ -5,10 +5,10 @@ import TextFadeUp from "./TextFadeUp";
 
 const Stats = () => {
 	const stats = [
-		{ title: "Team experts", value: "70" },
-		{ title: "In the industry since", value: "2009" },
-		{ title: "Exits by our clients", value: "$6B+" },
-		{ title: "Startup clients raised", value: "$1B+" },
+		{ title: "Specialized Team", value: "70" },
+		{ title: "In the industry since", value: "2020" },
+		{ title: "Countries", value: "3" },
+		{ title: "Projects", value: "15+" },
 		{ title: "IPO for Cellebrite", value: "$2.4B" },
 		{ title: "Improvement in self-service for Turo", value: "58%" },
 		{ title: "Ninox after-trial retention increased", value: "+30%" },
@@ -22,10 +22,10 @@ const Stats = () => {
 					<TextFadeUp key={index}>
 						<div className='border-b border-gray-300 pb-6'>
 							<TextFadeUp>
-								<h3 className='text-lg font-medium text-black'>{stat.title}</h3>
+								<h3 className='text-lg font-medium text-black text-center md:text-start'>{stat.title}</h3>
 							</TextFadeUp>
 							<TextFadeUp>
-								<CountNumbers start={0} end={parseFloat(stat.value.replace(/[^0-9.-]+/g, ""))} duration={3} className='text-3xl font-bold text-black mt-2' />
+								<CountNumbers start={0} end={parseFloat(stat.value.replace(/[^0-9.-]+/g, ""))} duration={3} className='text-3xl font-bold text-black mt-2 flex justify-center md:justify-start' />
 							</TextFadeUp>
 						</div>
 					</TextFadeUp>

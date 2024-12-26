@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import TextWordStagger from "./TextWordStagger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,11 +43,15 @@ const Services = () => {
 	];
 
 	return (
-		<section className='bg-[#818c90] py-44 px-4 flex justify-center items-center'>
-			<div className='max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-				{services.map((service, index) => (
-					<Box key={index} service={service} />
-				))}
+		<section className='bg-[#ffde59] py-44 px-4 flex justify-center items-center'>
+			<div className='max-w-7xl'>
+				<TextWordStagger className='text-5xl font-bold tracking-widest' text='OUR SERVICES' />
+				<TextWordStagger className='text-2xl tracking-widest' text='PROVIDING WIDE RANGE OF QUALITY SERVICES TO ALL OUR CLIENTS' />
+				<div className='max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
+					{services.map((service, index) => (
+						<Box key={index} service={service} />
+					))}
+				</div>
 			</div>
 		</section>
 	);
@@ -79,9 +84,9 @@ const Box: React.FC<{ service: Service }> = ({ service }) => {
 		);
 	});
 	return (
-		<div ref={boxRef} className='box border-4 border-white shadow-2xl transition-shadow'>
-			<h3 className='text-3xl font-bold p-6 h-48 text-white border-white border-b-4'>{service.title}</h3>
-			<p className='text-white p-6'>{service.description}</p>
+		<div ref={boxRef} className='box border-8 border-black'>
+			<h3 className='text-3xl font-bold p-6 h-40 text-balck border-black border-b-4'>{service.title}</h3>
+			<p className='text-black p-6'>{service.description}</p>
 		</div>
 	);
 };

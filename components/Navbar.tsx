@@ -36,8 +36,8 @@ export default function Example() {
 	}, [isExpanded]);
 
 	return (
-		<header className={`fixed top-0 z-50 w-full flex justify-center items-center px-12 transition-all duration-200 ${isScrolled ? "py-4 bg-transparent" : "py-8 bg-transparent"}`}>
-			{/* <nav className='hidden lg:flex w-full h-full flex-row justify-between items-center max-w-7xl z-50'>
+		<header className={`fixed top-0 w-full flex justify-center items-center px-12 transition-all duration-200 z-40 ${isScrolled ? "py-4 bg-transparent" : "py-8 bg-transparent"}`}>
+			{/* <nav className='hidden lg:flex w-full h-full flex-row justify-between items-center max-w-7xl'>
 				<div>
 					<Link href='/' className='overflow-hidden'>
 						<Image className='rounded-full' alt='Al Madena Landscape Logo' src='/images/logos/logo-2.png' width={300} height={300} />
@@ -60,7 +60,7 @@ export default function Example() {
 				</button>
 			</nav> */}
 
-			<nav className='flex w-full h-full flex-row-reverse justify-between items-center z-50'>
+			<nav className='flex w-full h-full flex-row-reverse justify-between items-center z-40'>
 				{/* <div className='w-20'>
 					<Link href='/' className='overflow-hidden'>
 						{isScrolled ? <Image className='w-12' alt='Al Madena Landscape Logo' src='/images/logos/logo-white.png' width={150} height={150} /> : <Image className='' alt='Al Madena Landscape Logo' src='/images/logos/logo-black.png' width={200} height={200} />}
