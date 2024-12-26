@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const SocialsStrip = ({ className }: { className?: string }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 
-	const icons = [<CiLocationArrow1 />, <CiChat1 />, <CiBookmark />, <PiInstagramLogoLight />, <CiHeart />, <CiLocationArrow1 />, <CiChat1 />, <CiBookmark />, <PiInstagramLogoLight />, <CiHeart />, <CiLocationArrow1 />, <CiChat1 />, <CiBookmark />, <PiInstagramLogoLight />, <CiHeart />];
+	const icons = [<CiLocationArrow1 key='plane1' />, <CiChat1 key='comment1' />, <CiBookmark key='bookmark1' />, <PiInstagramLogoLight key='insta1' />, <CiHeart key='heart1' />, <CiLocationArrow1 key='plane2' />, <CiChat1 key='comment2' />, <CiBookmark key='bookmark2' />, <PiInstagramLogoLight key='insta2' />, <CiHeart key='heart2' />, <CiLocationArrow1 key='plane3' />, <CiChat1 key='comment3' />, <CiBookmark key='bookmark3' />, <PiInstagramLogoLight key='insta3' />, <CiHeart key='heart3' />];
 
 	useGSAP(() => {
 		if (containerRef.current) {

@@ -1,5 +1,4 @@
 import React from "react";
-import TextFadeUp from "./TextFadeUp";
 import { cn } from "@/lib/utils";
 import SocialsStrip from "./SocialsStrip";
 import TextWordStagger from "./TextWordStagger";
