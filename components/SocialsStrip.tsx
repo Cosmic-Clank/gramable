@@ -37,7 +37,7 @@ const SocialsStrip = ({ className }: { className?: string }) => {
 	return (
 		<div ref={containerRef} className='absolute left-0 right-0 top-0 w-full py-4 flex items-center justify-evenly gap-3 overflow-hidden'>
 			{icons.map((icon, index) => (
-				<div key={index} className={cn("icon text-7xl text-black opacity-0", className)}>
+				<div key={index} className={cn("icon text-4xl md:text-7xl text-black opacity-0", className)}>
 					{icon}
 				</div>
 			))}

@@ -79,7 +79,6 @@ const Box: React.FC<{ service: Service }> = ({ service }) => {
 					start: "top 90%",
 					toggleActions: "play none none none",
 				},
-				delay: service.id * 0.3,
 			}
 		);
 	});

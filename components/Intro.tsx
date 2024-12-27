@@ -47,17 +47,17 @@ const Intro = () => {
 		<section className='relative' id='home'>
 			<div className='flex items-center justify-center h-screen bg-black overflow-hidden z-50 absolute left-0 right-0 top-0' ref={divRef}>
 				<div className='flex flex-col justify-center items-center absolute' ref={containerRef}>
-					<h1 className='text-white text-8xl opacity-0 font-bold' ref={textRef}>
+					<h1 className='text-white text-6xl md:text-8xl opacity-0 font-bold' ref={textRef}>
 						Gramable.
 					</h1>
 					<div className='flex text-white gap-6'>
-						<div className='uppercase opacity-0 tracking-[0.8rem] font-thin text-2xl subtitle'>SOCIAL</div>
-						<div className='uppercase opacity-0 tracking-[1rem] font-thin text-2xl subtitle'>MEDIA</div>
-						<div className='uppercase opacity-0 tracking-[1rem] font-thin text-2xl subtitle'>AGENCY</div>
+						<div className='uppercase opacity-0 tracking-widest md:tracking-[1rem] font-thin text-xl md:text-2xl subtitle'>SOCIAL</div>
+						<div className='uppercase opacity-0 tracking-widest md:tracking-[1rem] font-thin text-xl md:text-2xl subtitle'>MEDIA</div>
+						<div className='uppercase opacity-0 tracking-widest md:tracking-[1rem] font-thin text-xl md:text-2xl subtitle'>AGENCY</div>
 					</div>
 				</div>
 			</div>
-			<nav className='fixed top-0 left-0 right-0 flex items-center justify-between md:mx-20 mx-12 border-b border-b-transparent py-6 bg-transparent z-50 nav-container'>
+			<nav className='fixed top-0 left-0 right-0 flex items-center justify-between md:mx-20 sm:mx-12 mx-6 border-b border-b-transparent py-6 bg-transparent z-50 nav-container'>
 				{/* Logo */}
 				<div className='text-white text-4xl font-extrabold tracking-wider opacity-0 gramable-logo'>
 					G<span className='text-4xl'>.</span>
@@ -95,19 +95,19 @@ const Intro = () => {
 						✕
 					</button>
 					<div className='flex flex-col items-center justify-center h-full gap-8 text-white uppercase'>
-						<a href='#' className='hover:opacity-70 text-lg'>
+						<a href='#home' className='hover:opacity-70 text-lg'>
 							Home
 						</a>
-						<a href='#' className='hover:opacity-70 text-lg'>
+						<a href='#about' className='hover:opacity-70 text-lg'>
 							About
 						</a>
-						<a href='#' className='hover:opacity-70 text-lg'>
+						<a href='#work' className='hover:opacity-70 text-lg'>
 							Work
 						</a>
-						<a href='#' className='hover:opacity-70 text-lg'>
+						<a href='#team' className='hover:opacity-70 text-lg'>
 							Team
 						</a>
-						<a href='#' className='hover:opacity-70 text-lg'>
+						<a href='#contact' className='hover:opacity-70 text-lg'>
 							Contact
 						</a>
 					</div>

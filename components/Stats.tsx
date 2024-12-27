@@ -9,10 +9,10 @@ const Stats = () => {
 		{ title: "In the industry since", value: "2020" },
 		{ title: "Countries", value: "3" },
 		{ title: "Projects", value: "15+" },
-		{ title: "IPO for Cellebrite", value: "$2.4B" },
-		{ title: "Improvement in self-service for Turo", value: "58%" },
-		{ title: "Ninox after-trial retention increased", value: "+30%" },
-		{ title: "Completed sessions in Tile onboarding", value: "+60%" },
+		// { title: "IPO for Cellebrite", value: "$2.4B" },
+		// { title: "Improvement in self-service for Turo", value: "58%" },
+		// { title: "Ninox after-trial retention increased", value: "+30%" },
+		// { title: "Completed sessions in Tile onboarding", value: "+60%" },
 	];
 
 	return (
