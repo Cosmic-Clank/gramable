@@ -3,11 +3,6 @@ import SectionContainer from "./SectionContainer";
 import ParallaxImage from "./ParallaxImage";
 
 const ClientPics = () => {
-	// Separate image arrays for top and bottom rows
-	const topRowImages = ["https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg", "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg", "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg", "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg"];
-
-	const bottomRowImages = ["https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg", "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg", "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg", "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/RX_THUMBNAIL/IMAGES/VENDOR/2024/3/29/63820aa8-c588-407d-b195-6e90b1db44f2_821707.jpg"];
-
 	return (
 		<SectionContainer className='relative bg-[#d9d9d9] overflow-hidden space-y-24'>
 			{/* Top Row */}
