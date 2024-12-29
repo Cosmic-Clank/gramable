@@ -13,16 +13,16 @@ const ClientPics = () => {
 			{/* Top Row */}
 			<div className='flex gap-6 sm:gap-20 md:gap-36'>
 				<div className='flex gap-6 sm:gap-20 md:gap-36 animate-swipe-left'>
-					{topRowImages.map((src, index) => (
-						<div key={`top-${index}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
-							<ParallaxImage src={src} alt={`Top Row Client Work ${index + 1}`} />
+					{Array.from({ length: 12 }, (_, index) => index + 1).map((number) => (
+						<div key={`top-${number}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
+							<ParallaxImage src={`/images/gallery/${number}.png`} alt={`Top Row Client Work ${number + 1}`} />
 						</div>
 					))}
 				</div>
 				<div className='flex gap-6 sm:gap-20 md:gap-36 animate-swipe-left'>
-					{topRowImages.map((src, index) => (
-						<div key={`top-${index}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
-							<ParallaxImage src={src} alt={`Top Row Client Work ${index + 1}`} />
+					{Array.from({ length: 12 }, (_, index) => index + 13).map((number) => (
+						<div key={`top-${number}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
+							<ParallaxImage src={`/images/gallery/${number}.png`} alt={`Top Row Client Work ${number + 1}`} />
 						</div>
 					))}
 				</div>
@@ -30,16 +30,16 @@ const ClientPics = () => {
 			{/* Bottom Row */}
 			<div className='flex justify-end gap-6 sm:gap-20 md:gap-36'>
 				<div className='flex gap-6 sm:gap-20 md:gap-36 animate-swipe-right'>
-					{bottomRowImages.map((src, index) => (
-						<div key={`top-${index}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
-							<ParallaxImage src={src} alt={`Top Row Client Work ${index + 1}`} />
+					{Array.from({ length: 12 }, (_, index) => index + 1).map((number) => (
+						<div key={`top-${number}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
+							<ParallaxImage src={`/images/gallery/${number}.png`} alt={`Top Row Client Work ${number + 1}`} />
 						</div>
 					))}
 				</div>
 				<div className='flex gap-6 sm:gap-20 md:gap-36 animate-swipe-right'>
-					{bottomRowImages.map((src, index) => (
-						<div key={`top-${index}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
-							<ParallaxImage src={src} alt={`Top Row Client Work ${index + 1}`} />
+					{Array.from({ length: 12 }, (_, index) => index + 13).map((number) => (
+						<div key={`top-${number}`} className='w-[200px] h-[140px] sm:w-[500px] sm:h-[350px] md:w-[700px] md:h-[550px] overflow-hidden rounded-[40px] sm:rounded-[80px] md:rounded-[100px] bg-gray-700'>
+							<ParallaxImage src={`/images/gallery/${number}.png`} alt={`Top Row Client Work ${number + 1}`} />
 						</div>
 					))}
 				</div>

@@ -115,7 +115,7 @@ const Intro = () => {
 			</nav>
 			<div className='h-screen'>
 				<video className='absolute inset-0 w-full h-full object-cover' autoPlay muted loop>
-					<source src='/videos/camel.mp4' type='video/mp4' />
+					<source src='/videos/intro.mp4' type='video/mp4' />
 					Your browser does not support the video tag.
 				</video>
 				<div className='absolute inset-0 w-full h-full object-cover flex flex-col justify-center items-center bg-black bg-opacity-40'>

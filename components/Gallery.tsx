@@ -1,6 +1,5 @@
 import React from "react";
 import ParallaxImage from "./ParallaxImage";
-import TextFadeUp from "./TextFadeUp";
 
 const Gallery = () => {
 	return (

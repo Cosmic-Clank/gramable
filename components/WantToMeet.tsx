@@ -4,6 +4,7 @@ import SocialsStrip from "./SocialsStrip";
 import TextWordStagger from "./TextWordStagger";
 import { IoIosCall } from "react-icons/io";
 import Link from "next/link";
+import TextFadeUp from "./TextFadeUp";
 
 const WantToMeet = () => {
 	return (
@@ -11,10 +12,12 @@ const WantToMeet = () => {
 			<SocialsStrip className='text-white' />
 
 			<TextWordStagger text='WANT TO MEET?' containerClassName='justify-center' className='tracking-widest text-white' />
-			<Link className='text-black bg-white px-4 py-2 rounded-md text-xl flex justify-center items-center gap-4 hover:opacity-50' href={`tel:+971552782684`}>
-				<IoIosCall size={24} />
-				Contact Us
-			</Link>
+			<TextFadeUp>
+				<Link className='text-black bg-white px-4 py-2 rounded-md text-xl flex justify-center items-center gap-4 hover:opacity-50' href={`tel:+971552782684`}>
+					<IoIosCall size={24} />
+					Contact Us
+				</Link>
+			</TextFadeUp>
 		</section>
 	);
 };

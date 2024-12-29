@@ -73,11 +73,6 @@ const ContactUs = () => {
 					<i className='fab fa-instagram'></i>
 				</a>
 			</div>
-
-			{/* Footer Section */}
-			<div className='absolute bottom-8 right-8'>
-				<p className='text-gray-400 text-sm'>we build brands.</p>
-			</div>
 		</section>
 	);
 };

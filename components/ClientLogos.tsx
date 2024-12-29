@@ -1,6 +1,5 @@
 import React from "react";
 import SectionContainer from "./SectionContainer";
-import ParallaxImage from "./ParallaxImage";
 import TextWordStagger from "./TextWordStagger";
 
 const ClientPics = () => {
@@ -17,7 +16,7 @@ const ClientPics = () => {
 						</div>
 					))}
 				</div>
-				<div className='flex gap-4 animate-swipe-left'>
+				<div className='flex gap-6 animate-swipe-left'>
 					{Array.from({ length: 13 }, (_, index) => index + 1).map((number) => (
 						<div key={number} className='w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[150px] md:h-[110px] rounded-md bg-gray-700'>
 							<img src={`/images/clientlogos/${number}.png`} alt={`Top Row Client Work ${number + 1}`} />

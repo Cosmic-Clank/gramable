@@ -143,15 +143,15 @@ const Footer = () => {
 			</div>
 
 			{/* Bottom Links */}
-			<div className='bg-gray-100 py-4'>
+			<div className='bg-gray-100 px-6 py-4'>
 				<div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between text-sm text-gray-500'>
 					<p>© 2024 Gramable.</p>
-					<div className='flex space-x-4'>
+					{/* <div className='flex space-x-4'>
 						<a href='#'>Sitemap</a>
 						<a href='#'>Privacy Policy</a>
 						<a href='#'>Terms of Use</a>
 						<a href='#'>Cookie Policy</a>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</footer>
