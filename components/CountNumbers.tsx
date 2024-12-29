@@ -12,9 +12,10 @@ interface CountNumbersProps {
 	end?: number;
 	duration?: number;
 	className?: string;
+	suffix?: string;
 }
 
-const CountNumbers: React.FC<CountNumbersProps> = ({ start = 0, end = 100, duration = 2, className }) => {
+const CountNumbers: React.FC<CountNumbersProps> = ({ start = 0, end = 100, duration = 2, suffix = "", className }) => {
 	const numberRef = useRef<HTMLDivElement>(null);
 
 	useGSAP(() => {
@@ -33,7 +34,7 @@ const CountNumbers: React.FC<CountNumbersProps> = ({ start = 0, end = 100, durat
 				ease: "expo.out",
 				onUpdate: function () {
 					if (numberRef.current) {
-						numberRef.current.innerText = Math.ceil(this.targets()[0].innerText).toString();
+						numberRef.current.innerText = Math.ceil(this.targets()[0].innerText).toString() + suffix;
 					}
 				},
 			}

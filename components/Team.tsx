@@ -58,7 +58,7 @@ const TeamSection = () => {
 	}, []);
 
 	return (
-		<section ref={containerRef} className='bg-[#b5a48a] py-20 px-6 flex justify-center items-center' id='team'>
+		<section ref={containerRef} className='bg-[#b5a48a] py-44 px-6 flex justify-center items-center' id='team'>
 			<div className='max-w-7xl'>
 				<div className='mb-16'>
 					<TextWordStagger className='text-4xl font-bold text-white tracking-wide' text='THE TEAM' />

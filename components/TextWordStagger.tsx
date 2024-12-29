@@ -27,8 +27,8 @@ const TextWordStagger: React.FC<TextWordStaggerProps> = ({ text, className, cont
 				{
 					opacity: 1,
 					y: 0,
-					duration: 0.6,
-					stagger: 0.08,
+					duration: 0.3,
+					stagger: 0.05,
 					scrollTrigger: {
 						trigger: containerRef.current,
 						start: "top 80%",

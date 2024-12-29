@@ -13,7 +13,7 @@ const ParallaxImage = ({ className, imageClassName, src, alt = "parallax image" 
 
 	useGSAP(() => {
 		if (containerRef.current && imageRef.current) {
-			gsap.set(imageRef.current, { scale: 1.3, y: -80 });
+			gsap.set(imageRef.current, { scale: 1.4, y: -40 });
 
 			gsap.to(imageRef.current, {
 				scrollTrigger: {
@@ -22,7 +22,7 @@ const ParallaxImage = ({ className, imageClassName, src, alt = "parallax image" 
 					end: "bottom top",
 					scrub: true,
 				},
-				y: 10,
+				y: 40,
 			});
 		}
 	}, []);

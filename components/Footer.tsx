@@ -3,6 +3,9 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaSnapchat } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,25 +25,29 @@ const Footer = () => {
 
 			{/* Links Section */}
 			<div className='py-12 px-6'>
-				<div className='max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8'>
+				<div className='max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8'>
 					{/* Social */}
 					<div>
 						<h3 className='text-sm font-bold text-gray-600 mb-4'>Social</h3>
 						<ul className='space-y-2'>
 							<li>
-								<TextFadeUp>LinkedIn</TextFadeUp>
+								<TextFadeUp className='flex items-center space-x-1 hover:text-gray-500'>
+									<FaInstagram className='mb-1' />
+									<Link href='https://www.instagram.com/gramable.ae'>Instagram</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Instagram</TextFadeUp>
+								<TextFadeUp className='flex items-center space-x-1 hover:text-gray-500'>
+									<FaFacebook className='mb-1' />
+									<Link href='https://www.facebook.com/gramable.ae'>Facebook</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Behance</TextFadeUp>
-							</li>
-							<li>
-								<TextFadeUp>Dribbble</TextFadeUp>
-							</li>
-							<li>
-								<TextFadeUp>X (Twitter)</TextFadeUp>
+								<TextFadeUp className='flex items-center space-x-1 hover:text-gray-500'>
+									<FaSnapchat className='mb-1' />
+
+									<Link href='https://www.facebook.com/gramable.ae'>Snapchat</Link>
+								</TextFadeUp>
 							</li>
 						</ul>
 					</div>
@@ -50,35 +57,52 @@ const Footer = () => {
 						<h3 className='text-sm font-bold text-gray-600 mb-4'>Company</h3>
 						<ul className='space-y-2'>
 							<li>
-								<TextFadeUp>About</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link className='hover:text-gray' href='#about'>
+										About
+									</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Case studies</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link className='hover:text-gray' href='#services'>
+										Services
+									</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Process</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link className='hover:text-gray' href='#gallery'>
+										Projects
+									</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Services</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link href='#about'>Case studies</Link>
+								</TextFadeUp>
 							</li>
 						</ul>
 					</div>
 
 					{/* Learn */}
 					<div>
-						<h3 className='text-sm font-bold text-gray-600 mb-4'>Learn</h3>
+						<h3 className='text-sm font-bold text-gray-600 mb-4'>More</h3>
 						<ul className='space-y-2'>
 							<li>
-								<TextFadeUp>Testimonials</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link href='#team'>Team</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>FAQs</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link href='#testimonials'>Testimonials</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Articles</TextFadeUp>
-							</li>
-							<li>
-								<TextFadeUp>Careers</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link href='#team'>Careers</Link>
+								</TextFadeUp>
 							</li>
 						</ul>
 					</div>
@@ -88,26 +112,30 @@ const Footer = () => {
 						<h3 className='text-sm font-bold text-gray-600 mb-4'>Locations</h3>
 						<ul className='space-y-2'>
 							<li>
-								<TextFadeUp>San Francisco, CA</TextFadeUp>
+								<TextFadeUp>UAE</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Los Angeles, CA</TextFadeUp>
+								<TextFadeUp>UK</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>New York, NY</TextFadeUp>
+								<TextFadeUp>USA</TextFadeUp>
 							</li>
 						</ul>
 					</div>
 
 					{/* Get in touch */}
-					<div>
+					<div className='col-span-2 lg:col-span-1'>
 						<h3 className='text-sm font-bold text-gray-600 mb-4'>Get in touch</h3>
 						<ul className='space-y-2'>
 							<li>
-								<TextFadeUp>+1 415 831 7880</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link href='tel:+971552782684'>Phone: +971552782684</Link>
+								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp>Contact us</TextFadeUp>
+								<TextFadeUp className='hover:text-gray-500'>
+									<Link href='https://wa.me/+971552782684'>Whatsapp: +971552782684</Link>
+								</TextFadeUp>
 							</li>
 						</ul>
 					</div>
@@ -117,7 +145,7 @@ const Footer = () => {
 			{/* Bottom Links */}
 			<div className='bg-gray-100 py-4'>
 				<div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between text-sm text-gray-500'>
-					<p>© 2024, Ramotion Inc.</p>
+					<p>© 2024 Gramable.</p>
 					<div className='flex space-x-4'>
 						<a href='#'>Sitemap</a>
 						<a href='#'>Privacy Policy</a>

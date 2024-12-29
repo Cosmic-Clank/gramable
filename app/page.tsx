@@ -12,6 +12,8 @@ import WeBuildBrands from "@/components/WeBuildBrands";
 import WantToMeet from "@/components/WantToMeet";
 import Gallery from "@/components/Gallery";
 import WhatsappWidget from "@/components/WhatsappWidget";
+import AboutUs from "@/components/AboutUs";
+import ClientLogos from "@/components/ClientLogos";
 
 const league_spartan = League_Spartan({
 	subsets: ["latin"],
@@ -25,10 +27,12 @@ export default function Home() {
 			<Intro />
 			<WeBuildBrands />
 			<ClientPics />
+			<AboutUs />
 			<WantToMeet />
 			<Services />
 			<Stats />
 			<Gallery />
+			<ClientLogos />
 			<Team />
 			<Testimonials />
 			<ContactUs />

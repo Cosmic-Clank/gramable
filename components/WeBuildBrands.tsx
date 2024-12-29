@@ -11,7 +11,7 @@ const WeBuildBrands = () => {
 			<SocialsStrip />
 			<div className='flex md:flex-row flex-col items-center justify-center py-16 px-2 bg-white gap-16'>
 				{/* Image Section */}
-				<div className='max-w-96 aspect-square p-4'>
+				<div className='max-w-96 aspect-square md:aspect-[2/3] p-4'>
 					<ParallaxImage src='https://studiominimadesigns.com/designsessions/images/ffdb91b9a1299000426d76c8e2aa5b22.jpg' alt='Interior Design' className='w-full h-full object-cover rounded-lg' />
 				</div>
 
@@ -20,7 +20,7 @@ const WeBuildBrands = () => {
 					<TextFadeUp className='text-2xl font-semibold tracking-wide mb-4'>
 						<p>WE BUILD BRANDS.</p>
 					</TextFadeUp>
-					<TextWordStagger containerClassName='max-w-xl' className='text-3xl text-gray-700' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in metus iaculis, convallis dui nec, sodales enim. Quisque lacinia aliquam nunc, nec widj jdiwwwd ii' />
+					<TextWordStagger containerClassName='max-w-xl' className='text-xl text-gray-700' text="At Gramable, we're passionate about transforming businesses into unforgettable brands. We believe that every detail matters—from striking visuals to engaging content—and we leverage the power of design, storytelling, and strategy to bring your brand's personality to life. Our team thrives on creating cohesive brand identities that stand out in a crowded digital world, ensuring that every post, campaign, and interaction reflects your unique vision and values. By blending creativity with data-driven insights, we help businesses not only gain visibility but also build lasting connections with their audience. Let us help you turn your business into a brand that leaves a lasting impression." />
 				</div>
 			</div>
 		</section>
