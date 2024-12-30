@@ -7,7 +7,7 @@ import Stats from "@/components/Stats";
 import Team from "@/components/Team";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
-import { League_Spartan } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import WeBuildBrands from "@/components/WeBuildBrands";
 import WantToMeet from "@/components/WantToMeet";
 import Gallery from "@/components/Gallery";
@@ -15,7 +15,7 @@ import WhatsappWidget from "@/components/WhatsappWidget";
 import AboutUs from "@/components/AboutUs";
 import ClientLogos from "@/components/ClientLogos";
 
-const league_spartan = League_Spartan({
+const noto_sans = Noto_Sans({
 	subsets: ["latin"],
 	weight: ["100", "300", "500", "600"],
 	display: "swap",
@@ -23,16 +23,16 @@ const league_spartan = League_Spartan({
 
 export default function Home() {
 	return (
-		<main className={cn("relative", league_spartan.className)}>
+		<main className={cn("relative", noto_sans.className)}>
 			<Intro />
 			<WeBuildBrands />
 			<ClientPics />
 			<AboutUs />
 			<WantToMeet />
-			<Services />
 			<Stats />
-			<Gallery />
+			<Services />
 			<ClientLogos />
+			<Gallery />
 			<Team />
 			<Testimonials />
 			<ContactUs />

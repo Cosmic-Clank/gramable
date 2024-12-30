@@ -2,14 +2,17 @@
 import React, { useRef } from "react";
 import { PiInstagramLogoLight } from "react-icons/pi";
 import { CiLocationArrow1, CiChat1, CiBookmark, CiHeart } from "react-icons/ci";
+import { FiAperture, FiArrowLeft, FiArrowUpCircle, FiBookmark, FiCamera, FiCompass, FiDribbble, FiEdit, FiExternalLink, FiFolder, FiHeart, FiInstagram, FiTarget, FiThumbsUp } from "react-icons/fi";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { cn } from "@/lib/utils";
 
 const SocialsStrip = ({ className }: { className?: string }) => {
 	const containerRef = useRef<HTMLDivElement>(null);
+	const strokeWidth = 0.5;
 
-	const icons = [<CiLocationArrow1 key='plane1' />, <CiChat1 key='comment1' />, <CiBookmark key='bookmark1' />, <PiInstagramLogoLight key='insta1' />, <CiHeart key='heart1' />, <CiLocationArrow1 key='plane2' />, <CiChat1 key='comment2' />, <CiBookmark key='bookmark2' />, <PiInstagramLogoLight key='insta2' />, <CiHeart key='heart2' />, <CiLocationArrow1 key='plane3' />, <CiChat1 key='comment3' />, <CiBookmark key='bookmark3' />, <PiInstagramLogoLight key='insta3' />, <CiHeart key='heart3' />];
+	const icons = [<FiAperture strokeWidth={strokeWidth} key='plane1' />, <FiHeart strokeWidth={strokeWidth} key='comment1' />, <FiBookmark strokeWidth={strokeWidth} key='bookmark1' />, <FiInstagram strokeWidth={strokeWidth} key='insta1' />, <FiHeart strokeWidth={strokeWidth} key='heart1' />, <FiCompass strokeWidth={strokeWidth} key='plane2' />, <FiBookmark strokeWidth={strokeWidth} key='comment2' />, <FiTarget strokeWidth={strokeWidth} key='bookmark2' />, <FiExternalLink strokeWidth={strokeWidth} key='insta2' />, <FiDribbble strokeWidth={strokeWidth} key='heart2' />, <FiThumbsUp strokeWidth={strokeWidth} key='plane3' />, <FiCamera strokeWidth={strokeWidth} key='comment3' />, <FiCompass strokeWidth={strokeWidth} key='bookmark3' />, <FiEdit strokeWidth={strokeWidth} key='insta3' />, <FiAperture strokeWidth={strokeWidth} key='heart3' />, <FiHeart strokeWidth={strokeWidth} key='comment1' />, <FiBookmark strokeWidth={strokeWidth} key='bookmark1' />, <FiInstagram strokeWidth={strokeWidth} key='insta1' />, <FiHeart strokeWidth={strokeWidth} key='heart1' />, <FiCompass strokeWidth={strokeWidth} key='plane2' />, <FiBookmark strokeWidth={strokeWidth} key='comment2' />, <FiTarget strokeWidth={strokeWidth} key='bookmark2' />, <FiExternalLink strokeWidth={strokeWidth} key='insta2' />, <FiDribbble strokeWidth={strokeWidth} key='heart2' />, <FiThumbsUp strokeWidth={strokeWidth} key='plane3' />];
 
 	useGSAP(() => {
 		if (containerRef.current) {
@@ -35,9 +38,9 @@ const SocialsStrip = ({ className }: { className?: string }) => {
 	}, []);
 
 	return (
-		<div ref={containerRef} className='absolute left-0 right-0 top-0 w-full py-4 flex items-center justify-evenly gap-3 overflow-hidden'>
+		<div ref={containerRef} className='absolute left-0 right-0 top-0 w-full py-4 flex items-center justify-evenly overflow-hidden'>
 			{icons.map((icon, index) => (
-				<div key={index} className={cn("icon text-4xl md:text-7xl text-black opacity-0", className)}>
+				<div key={index} className={cn("icon text-5xl md:text-7xl text-black opacity-0", className)}>
 					{icon}
 				</div>
 			))}

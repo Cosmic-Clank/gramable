@@ -39,7 +39,7 @@ const Footer = () => {
 							<li>
 								<TextFadeUp className='flex items-center space-x-1 hover:text-gray-500'>
 									<FaFacebook className='mb-1' />
-									<Link href='https://www.facebook.com/gramable.ae'>Facebook</Link>
+									<Link href='https://www.facebook.com/profile.php?id=61556849725379'>Facebook</Link>
 								</TextFadeUp>
 							</li>
 							<li>

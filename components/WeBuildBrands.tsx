@@ -17,10 +17,10 @@ const WeBuildBrands = () => {
 
 				{/* Text Section */}
 				<div className='text-left tracking-wide space-y-11'>
-					<TextFadeUp className='text-2xl font-semibold tracking-wide mb-4'>
+					<TextFadeUp className='text-3xl font-semibold tracking-wide mb-4'>
 						<p>WE BUILD BRANDS.</p>
 					</TextFadeUp>
-					<TextWordStagger containerClassName='max-w-xl' className='text-xl text-gray-700' text="At Gramable, we're passionate about transforming businesses into unforgettable brands. We believe that every detail matters—from striking visuals to engaging content—and we leverage the power of design, storytelling, and strategy to bring your brand's personality to life. Our team thrives on creating cohesive brand identities that stand out in a crowded digital world, ensuring that every post, campaign, and interaction reflects your unique vision and values. By blending creativity with data-driven insights, we help businesses not only gain visibility but also build lasting connections with their audience. Let us help you turn your business into a brand that leaves a lasting impression." />
+					<TextWordStagger containerClassName='max-w-xl' className='text-lg text-gray-700' text="At Gramable, we're passionate about transforming businesses into unforgettable brands. We believe that every detail matters—from striking visuals to engaging content—and we leverage the power of design, storytelling, and strategy to bring your brand's personality to life. Our team thrives on creating cohesive brand identities that stand out in a crowded digital world, ensuring that every post, campaign, and interaction reflects your unique vision and values. By blending creativity with data-driven insights, we help businesses not only gain visibility but also build lasting connections with their audience. Let us help you turn your business into a brand that leaves a lasting impression." />
 				</div>
 			</div>
 		</section>

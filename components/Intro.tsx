@@ -6,6 +6,14 @@ import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import { FaInstagram } from "react-icons/fa6";
 import Link from "next/link";
+import { League_Spartan } from "next/font/google";
+
+const league_spartan = League_Spartan({
+	subsets: ["latin"],
+	weight: ["100", "300", "500", "600"],
+	variable: "--font-league-spartan",
+	display: "swap",
+});
 
 const Intro = () => {
 	const textRef = useRef<HTMLDivElement>(null);
@@ -47,7 +55,7 @@ const Intro = () => {
 		<section className='relative' id='home'>
 			<div className='flex items-center justify-center h-screen bg-black overflow-hidden z-50 absolute left-0 right-0 top-0' ref={divRef}>
 				<div className='flex flex-col justify-center items-center absolute' ref={containerRef}>
-					<h1 className='text-white text-6xl md:text-8xl opacity-0 font-bold' ref={textRef}>
+					<h1 className={`text-white text-6xl md:text-8xl opacity-0 font-bold ${league_spartan.className}`} ref={textRef}>
 						Gramable.
 					</h1>
 					<div className='flex text-white gap-6'>
@@ -120,7 +128,7 @@ const Intro = () => {
 				</video>
 				<div className='absolute inset-0 w-full h-full object-cover flex flex-col justify-center items-center bg-black bg-opacity-40'>
 					<div className='text-center max-w-3xl p-4'>
-						<div className='text-white md:text-9xl sm:text-8xl text-6xl font-bold flex justify-center items-center'>
+						<div className={`text-white md:text-9xl sm:text-8xl text-6xl font-bold flex justify-center items-center ${league_spartan.className}`}>
 							<div className='G opacity-0 gramable-letter'>G</div>
 							<div className='r opacity-0 gramable-letter'>r</div>
 							<div className='a opacity-0 gramable-letter'>a</div>

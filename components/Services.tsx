@@ -44,10 +44,10 @@ const Services = () => {
 
 	return (
 		<section className='bg-[#ffde59] py-44 px-4 flex justify-center items-center'>
-			<div className='max-w-7xl'>
-				<TextWordStagger className='text-5xl font-bold tracking-widest' text='OUR SERVICES' />
-				<TextWordStagger className='text-xl tracking-widest' text='PROVIDING WIDE RANGE OF QUALITY SERVICES TO ALL OUR CLIENTS' />
-				<div className='max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
+			<div className='max-w-7xl space-y-3'>
+				<TextWordStagger className='text-4xl font-bold tracking-widest' text='OUR SERVICES' />
+				<TextWordStagger className='text-lg tracking-widest' text='PROVIDING WIDE RANGE OF QUALITY SERVICES TO ALL OUR CLIENTS' />
+				<div className='max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-20'>
 					{services.map((service, index) => (
 						<Box key={index} service={service} />
 					))}
@@ -64,7 +64,9 @@ interface Service {
 }
 
 const Box: React.FC<{ service: Service }> = ({ service }) => {
-	const boxRef = useRef(null);
+	const boxRef = useRef<HTMLDivElement>(null);
+
+	// Scroll animation
 	useGSAP(() => {
 		gsap.fromTo(
 			boxRef.current,
@@ -82,9 +84,27 @@ const Box: React.FC<{ service: Service }> = ({ service }) => {
 			}
 		);
 	});
+
+	// Hover animation
+	const handleMouseEnter = () => {
+		gsap.to(boxRef.current, {
+			scale: 1.03,
+			duration: 0.3,
+			ease: "power1.out",
+		});
+	};
+
+	const handleMouseLeave = () => {
+		gsap.to(boxRef.current, {
+			scale: 1,
+			duration: 0.3,
+			ease: "power1.out",
+		});
+	};
+
 	return (
-		<div ref={boxRef} className='box border-8 border-black hover:shadow-2xl transition-shadow ease-in-out'>
-			<h3 className='text-3xl font-bold p-6 h-40 text-balck border-black border-b-4'>{service.title}</h3>
+		<div ref={boxRef} className='box border-4 border-black hover:shadow-2xl transition-shadow duration-200' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+			<h3 className='text-xl md:text-2xl font-bold p-6 h-40 text-balck border-black border-b-4'>{service.title.toUpperCase()}</h3>
 			<p className='text-black p-6'>{service.description}</p>
 		</div>
 	);

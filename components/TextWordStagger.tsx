@@ -40,7 +40,7 @@ const TextWordStagger: React.FC<TextWordStaggerProps> = ({ text, className, cont
 	}, []);
 
 	return (
-		<div ref={containerRef} className={cn("flex flex-wrap gap-2", containerClassName)}>
+		<div ref={containerRef} className={cn("flex flex-wrap gap-x-2", containerClassName)}>
 			{/* Add scrollable space */}
 			{text.split(" ").map((word, index) => (
 				<div className='overflow-hidden' key={index}>
