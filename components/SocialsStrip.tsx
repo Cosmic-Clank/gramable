@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { FiAperture, FiBookmark, FiCamera, FiCompass, FiDribbble, FiEdit, FiExternalLink, FiFolder, FiHeart, FiInstagram, FiTarget, FiThumbsUp } from "react-icons/fi";
+import { FiAperture, FiBookmark, FiCamera, FiCompass, FiDribbble, FiEdit, FiExternalLink, FiHeart, FiInstagram, FiTarget, FiThumbsUp } from "react-icons/fi";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
