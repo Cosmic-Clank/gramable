@@ -1,8 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { PiInstagramLogoLight } from "react-icons/pi";
-import { CiLocationArrow1, CiChat1, CiBookmark, CiHeart } from "react-icons/ci";
-import { FiAperture, FiArrowLeft, FiArrowUpCircle, FiBookmark, FiCamera, FiCompass, FiDribbble, FiEdit, FiExternalLink, FiFolder, FiHeart, FiInstagram, FiTarget, FiThumbsUp } from "react-icons/fi";
+import { FiAperture, FiBookmark, FiCamera, FiCompass, FiDribbble, FiEdit, FiExternalLink, FiFolder, FiHeart, FiInstagram, FiTarget, FiThumbsUp } from "react-icons/fi";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
