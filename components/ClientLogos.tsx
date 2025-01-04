@@ -6,19 +6,19 @@ const ClientPics = () => {
 	return (
 		<SectionContainer className='relative bg-white overflow-hidden'>
 			<div className='w-full flex justify-center items-center mb-12'>
-				<TextWordStagger className='text-3xl' text='Our Clients' />
+				<TextWordStagger className='text-3xl' text='OUR CLIENTS' />
 			</div>
-			<div className='flex gap-6'>
-				<div className='flex gap-6 animate-swipe-left'>
+			<div className='flex gap-12'>
+				<div className='flex gap-12 animate-swipe-left'>
 					{Array.from({ length: 13 }, (_, index) => index + 1).map((number) => (
-						<div key={number} className='w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[150px] md:h-[110px] rounded-md bg-gray-700'>
+						<div key={number} className='w-[100px] h-[80px] sm:w-[150px] sm:h-[110px] md:w-[200px] md:h-[150px] rounded-md bg-gray-700'>
 							<img src={`/images/clientlogos/${number}.png`} alt={`Top Row Client Work ${number + 1}`} />
 						</div>
 					))}
 				</div>
-				<div className='flex gap-6 animate-swipe-left'>
+				<div className='flex gap-12 animate-swipe-left'>
 					{Array.from({ length: 13 }, (_, index) => index + 1).map((number) => (
-						<div key={number} className='w-[80px] h-[60px] sm:w-[120px] sm:h-[90px] md:w-[150px] md:h-[110px] rounded-md bg-gray-700'>
+						<div key={number} className='w-[100px] h-[80px] sm:w-[150px] sm:h-[110px] md:w-[200px] md:h-[150px] rounded-md bg-gray-700'>
 							<img src={`/images/clientlogos/${number}.png`} alt={`Top Row Client Work ${number + 1}`} />
 						</div>
 					))}

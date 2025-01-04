@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
-import { FaInstagram } from "react-icons/fa6";
+import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import Link from "next/link";
 import { League_Spartan } from "next/font/google";
 
@@ -67,7 +67,7 @@ const Intro = () => {
 			</div>
 			<nav className='fixed top-0 left-0 right-0 flex items-center justify-between md:mx-20 sm:mx-12 mx-6 border-b border-b-transparent py-6 bg-transparent z-50 nav-container'>
 				{/* Logo */}
-				<div className='text-white text-4xl font-extrabold tracking-wider opacity-0 gramable-logo'>
+				<div className={`text-white text-4xl font-extrabold tracking-wider opacity-0 gramable-logo ${league_spartan.className}`}>
 					G<span className='text-4xl'>.</span>
 				</div>
 
@@ -143,9 +143,17 @@ const Intro = () => {
 					</div>
 				</div>
 				<div className='absolute flex justify-between items-center bottom-0 md:p-14 p-8 w-full text-white font-medium'>
-					<div className='flex justify-center gap-2'>
-						<FaInstagram className='mt-[0.15rem]' />
-						<Link href='https://www.instagram.com/gramableagency/'>GRAMABLE.AE</Link>
+					<div className=''>
+						<div className='flex justify-center gap-2'>
+							<Link href='https://www.instagram.com/gramableagency/'>
+								<FaFacebook className='mt-[0.25rem]' />
+							</Link>
+							<Link href='https://www.facebook.com/profile.php?id=61556849725379'>
+								<FaInstagram className='mt-[0.25rem]' />
+							</Link>
+
+							<span>GRAMABLE.AE</span>
+						</div>
 					</div>
 					<div className=''>UAE US UK</div>
 				</div>

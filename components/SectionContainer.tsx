@@ -7,7 +7,7 @@ interface SectionContainerProps {
 }
 
 const SectionContainer: React.FC<SectionContainerProps> = ({ children, className }) => {
-	return <div className={clsx("py-40 px-4", className)}>{children}</div>;
+	return <div className={clsx("py-52 px-4", className)}>{children}</div>;
 };
 
 export default SectionContainer;

@@ -31,20 +31,20 @@ const Footer = () => {
 						<h3 className='text-sm font-bold text-gray-600 mb-4'>Social</h3>
 						<ul className='space-y-2'>
 							<li>
-								<TextFadeUp className='flex items-center space-x-1 hover:text-gray-500'>
-									<FaInstagram className='mb-1' />
+								<TextFadeUp className='flex items-center space-x-2 hover:text-gray-500'>
+									<FaInstagram className='mt-[0.125rem]' />
 									<Link href='https://www.instagram.com/gramable.ae'>Instagram</Link>
 								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp className='flex items-center space-x-1 hover:text-gray-500'>
-									<FaFacebook className='mb-1' />
+								<TextFadeUp className='flex items-center space-x-2 hover:text-gray-500'>
+									<FaFacebook className='mt-[0.125rem]' />
 									<Link href='https://www.facebook.com/profile.php?id=61556849725379'>Facebook</Link>
 								</TextFadeUp>
 							</li>
 							<li>
-								<TextFadeUp className='flex items-center space-x-1 hover:text-gray-500'>
-									<FaSnapchat className='mb-1' />
+								<TextFadeUp className='flex items-center space-x-2 hover:text-gray-500'>
+									<FaSnapchat className='mt-[0.125rem]' />
 
 									<Link href='https://www.facebook.com/gramable.ae'>Snapchat</Link>
 								</TextFadeUp>

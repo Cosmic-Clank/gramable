@@ -7,13 +7,11 @@ import ParallaxImage from "./ParallaxImage";
 
 const WeBuildBrands = () => {
 	return (
-		<section className={cn("w-full text-center py-56 px-4 text-4xl md:text-5xl relative")} id='about'>
+		<section className={cn("w-full text-center py-40 px-4 text-4xl md:text-5xl relative bg-[#f1ede2] ")} id='about'>
 			<SocialsStrip />
-			<div className='flex md:flex-row flex-col items-center justify-center py-16 px-2 bg-white gap-16'>
+			<div className='flex md:flex-row flex-col items-center justify-center py-16 px-2 gap-16'>
 				{/* Image Section */}
-				<div className='max-w-96 aspect-square md:aspect-[2/3] p-4'>
-					<ParallaxImage src='https://studiominimadesigns.com/designsessions/images/ffdb91b9a1299000426d76c8e2aa5b22.jpg' alt='Interior Design' className='w-full h-full object-cover rounded-lg' />
-				</div>
+				<ParallaxImage src='https://studiominimadesigns.com/designsessions/images/ffdb91b9a1299000426d76c8e2aa5b22.jpg' alt='Interior Design' className='w-full h-full object-cover rounded-lg max-w-[28rem] aspect-square md:aspect-[5/4] p-4' />
 
 				{/* Text Section */}
 				<div className='text-left tracking-wide space-y-11'>

@@ -38,11 +38,11 @@ const testimonials = [
 
 const Testimonials = () => {
 	return (
-		<section className='w-full px-4 md:px-8 py-12 md:py-24 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 bg-[#212121] text-white'>
+		<section className='w-full px-4 md:px-8 py-12 md:py-24 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 bg-white text-white'>
 			{/* Left Half: Centered, Sticky Title */}
 			<div className='w-full md:w-1/2 flex items-start justify-center'>
 				<div className='md:sticky md:top-1/3 pt-8 md:pt-28 text-center md:text-left'>
-					<h2 className='text-3xl md:text-5xl font-bold text-gray-200'>TESTIMONIALS</h2>
+					<h2 className='text-3xl md:text-5xl font-bold text-black'>TESTIMONIALS</h2>
 				</div>
 			</div>
 
@@ -51,8 +51,8 @@ const Testimonials = () => {
 				{testimonials.map((testimonial, index) => (
 					<TextFadeUp key={index}>
 						<div className='flex flex-col items-center justify-center space-y-8 py-8 md:py-16'>
-							<p className='text-lg md:text-2xl font-medium text-gray-200 leading-relaxed text-center md:text-left'>&quot;{testimonial.content}&quot;</p>
-							<span className='block text-sm md:text-lg text-gray-400 mb-8'>- {testimonial.name}</span>
+							<p className='text-lg md:text-2xl font-medium text-black leading-relaxed text-center md:text-left'>&quot;{testimonial.content}&quot;</p>
+							<span className='block text-sm md:text-lg text-black mb-8'>- {testimonial.name}</span>
 							{index < testimonials.length - 1 && <hr className='w-full border-gray-600' />}
 						</div>
 					</TextFadeUp>
