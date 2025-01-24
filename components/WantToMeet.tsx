@@ -8,7 +8,7 @@ import TextFadeUp from "./TextFadeUp";
 
 const WantToMeet = () => {
 	return (
-		<section className={cn("w-full text-center py-72 px-4 text-4xl md:text-5xl relative bg-[#030f28] flex flex-col justify-center items-center gap-8")}>
+		<section className={cn("w-full text-center py-72 px-4 text-4xl md:text-5xl relative bg-[#35455D] flex flex-col justify-center items-center gap-8")}>
 			<SocialsStrip className='text-white' />
 
 			<TextWordStagger text='LETS MEET?' containerClassName='justify-center' className='tracking-widest text-white' />

@@ -7,7 +7,7 @@ import ParallaxImage from "./ParallaxImage";
 
 const WeBuildBrands = () => {
 	return (
-		<section className={cn("w-full text-center py-40 px-4 text-4xl md:text-5xl relative bg-[#f1ede2] ")} id='about'>
+		<section className={cn("w-full text-center py-40 px-4 text-4xl md:text-5xl relative bg-white ")} id='about'>
 			<SocialsStrip />
 			<div className='flex md:flex-row flex-col items-center justify-center py-16 px-2 gap-16'>
 				{/* Image Section */}

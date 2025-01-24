@@ -3,7 +3,7 @@ import SectionContainer from "./SectionContainer";
 
 const ClientPics = () => {
 	return (
-		<SectionContainer className='relative bg-[#d9d9d9] overflow-hidden space-y-24'>
+		<SectionContainer className='relative bg-white overflow-hidden space-y-24'>
 			{/* Top Row */}
 			<div className='flex gap-6 sm:gap-20 md:gap-36'>
 				<div className='flex gap-6 sm:gap-20 md:gap-36 animate-swipe-left'>

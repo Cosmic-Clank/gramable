@@ -43,7 +43,7 @@ const Services = () => {
 	];
 
 	return (
-		<section className='bg-[#ffde59] py-44 px-4 flex justify-center items-center'>
+		<section className='bg-[#ECDDD0] py-44 px-4 flex justify-center items-center'>
 			<div className='max-w-7xl space-y-3'>
 				<TextWordStagger className='text-4xl font-bold tracking-widest' text='OUR SERVICES' />
 				<TextWordStagger className='text-lg tracking-widest' text='PROVIDING WIDE RANGE OF QUALITY SERVICES TO ALL OUR CLIENTS' />

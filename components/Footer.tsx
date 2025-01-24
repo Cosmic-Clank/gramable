@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook, FaSnapchat } from "react-icons/fa6";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +17,7 @@ const Footer = () => {
 			<div className='py-8 px-6 border-b border-gray-200'>
 				<div className='max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
 					<div>
-						<h2 className='text-4xl font-bold'>Gramable.</h2>
+						<Image src='/images/logo_big.png' width={200} height={90} alt='logo' />
 						{/* <p className='text-sm text-gray-500'>Subscribe for insights, case studies, and updates from the expert teams at Ramotion.</p> */}
 					</div>
 					{/* <button className='px-6 py-2 border border-gray-400 rounded-full text-gray-600 hover:bg-gray-100'>Subscribe</button> */}
