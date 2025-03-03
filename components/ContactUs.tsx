@@ -70,7 +70,7 @@ const ContactUs = () => {
 				</div>
 
 				{/* Google Map Section */}
-				<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.7592215406694!2d55.384523400000006!3d25.278683899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6108f4d41dfb%3A0xabd10ab959eca4f6!2sLoloat%20Al%20MadenaTechnical%20Services%20LLC!5e0!3m2!1sen!2sae!4v1735212310930!5m2!1sen!2sae' loading='lazy' className='rounded-xl mx-auto md:ml-auto max-w-sm max-h-sm aspect-square w-full'></iframe>
+				<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28899.21877797618!2d55.34976791749562!3d25.122084763368196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f640f1dcd4111%3A0xcb38e7be624792c3!2sDubai%20Silicon%20Oasis%20-%20Dubai!5e0!3m2!1sen!2sae!4v1741001105663!5m2!1sen!2sae' loading='lazy' className='rounded-xl mx-auto md:ml-auto max-w-sm max-h-sm aspect-square w-full'></iframe>
 			</div>
 
 			{/* Social Media Icons */}
